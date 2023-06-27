@@ -9,7 +9,7 @@ import pinecone
 import json
 
 
-app = Flask(__name__)
+app = Flask('__name__')
 
 load_dotenv()
 OPENAI_KEY = os.environ['OPENAI_KEY']
@@ -52,3 +52,7 @@ def search():
     jsonresult = json.dumps(final)
     
     return jsonresult
+
+
+if __name__ == "__main__":
+    app.run(debug=True)

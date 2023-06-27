@@ -1,0 +1,91 @@
+.navbar{
+	display: flex;
+	direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+	width: calc(100% - 60px);
+	position: fixed;
+	top: 20px;
+	left: 20px;
+	right: 20px;
+	color: white;
+	z-index: 5000;
+    transition: 0.2s all ease-in-out;
+    /* max-width: 100%; */
+    overflow: hidden;
+	border: 2px solid rgba(200, 200, 200, 0.5);
+	border-radius: 50px;
+	background-color: rgb(15, 15, 15);
+}
+.navbar .contents{
+	width: 100%;
+	display: flex;
+	direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+.navbar .logo{
+    font-weight: 600;
+    /* color: white !important; */
+    font-size: 26px;
+    cursor: pointer;
+	background: linear-gradient(
+		275.05deg,
+		#ff5252,
+		#ff8a80
+	);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+.navbar .nav-links{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+	align-items: center;
+    color: var(--grey);
+    font-weight: 400;
+}
+.navbar .nav-links a{
+	text-decoration: none;
+}
+.navbar .nav-links .item{
+    padding: 0 12px;
+    cursor: pointer;
+	position: relative;
+	text-decoration: none !important;
+	color: white;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+.navbar .nav-links .item::after{
+	width: 0%;
+	height: 0.1rem;
+	content: "";
+	background: linear-gradient(45deg, #ff5252, #ff8a80);
+	position: absolute;
+	bottom: -5px;
+	left: 50%;
+	transform: translateX(-50%);
+	border-radius: 5px;
+	transition: 0.2s all;
+}
+.navbar .nav-links .active .item::after{
+	width: 60%;
+	text-decoration: none;
+}
+.navbar .nav-links .item:hover::after{
+	width: 30%;
+}
+.navbar .nav-links .active .item:focus{
+	text-decoration: none;
+}
+.button{
+	padding: 5px 10px;
+	background-color: #ff5252;
+	border-radius: 25px;
+}
